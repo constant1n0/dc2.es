@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DC2 — Natural Cosmeceuticals</title>
+  <meta name="description" content="DC2 Natural Cosmeceuticals: fórmulas eficaces con activos de alto rendimiento. Descubre sérums, cremas y lociones con resultados visibles." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Paleta inspirada en el logo adjunto
+    tailwind.config = { theme: { extend: {
+      colors: {
+        ink: '#0b0f14',
+        brand: {
+          50:'#e6fffb',100:'#c8fff6',200:'#9cf7ea',300:'#6feee0',400:'#3fded2',
+          500:'#14b8a6', // teal principal
+          600:'#0ea5a4',700:'#0f766e',800:'#115e59',900:'#134e4a'
+        },
+        leaf: { 500:'#22c55e',700:'#15803d' },
+      },
+      fontFamily:{ sans:["Inter","system-ui","-apple-system","Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans","Helvetica Neue","Arial","sans-serif"]},
+      boxShadow:{ soft:'0 12px 30px rgba(0,0,0,0.15)'}
+    }}};
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>.container-slim{max-width:1120px}</style>
+</head>
+<body class="font-sans bg-ink text-white">
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-ink/70 border-b border-white/10">
+    <nav class="container container-slim mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Reemplaza por tu logo real en /assets -->
+        <img src="assets/dc2-logo.png" alt="Logotipo DC2" class="h-9 w-9 rounded-xl ring-1 ring-white/10 object-contain bg-white/5" />
+        <div>
+          <p class="text-lg font-extrabold leading-4">DC2</p>
+          <p class="text-xs text-white/60">NATURAL COSMECEUTICALS</p>
+        </div>
+      </a>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-white/20">Menú</button>
+      <ul id="menu" class="hidden md:flex items-center gap-6 text-sm">
+        <li><a class="hover:text-brand-400" href="#productos">Productos</a></li>
+        <li><a class="hover:text-brand-400" href="#beneficios">Beneficios</a></li>
+        <li><a class="hover:text-brand-400" href="#sostenibilidad">Sostenibilidad</a></li>
+        <li><a class="hover:text-brand-400" href="#faq">FAQ</a></li>
+        <li><a class="hover:text-ink bg-leaf-500 text-ink font-semibold px-4 py-2 rounded-xl" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/25 via-transparent to-leaf-500/20"></div>
+    <div class="container container-slim mx-auto px-4 py-16 md:py-24 relative grid md:grid-cols-2 items-center gap-10">
+      <div>
+        <p class="text-sm tracking-widest text-brand-300 font-semibold">NUEVA COLECCIÓN</p>
+        <h1 class="mt-2 text-4xl md:text-6xl font-extrabold leading-tight">Cosmética <span class="text-brand-400">eficaz</span> con visión <span class="text-leaf-500">natural</span></h1>
+        <p class="mt-5 text-white/80 text-lg md:text-xl max-w-xl">Fórmulas de alto rendimiento con activos como Ácido Hialurónico, DMAE y complejos de aminoácidos. Experiencia sensorial fresca y resultados visibles.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#productos" class="px-6 py-3 rounded-2xl bg-leaf-500 text-ink font-bold shadow-soft hover:brightness-95">Ver productos</a>
+          <a href="#contacto" class="px-6 py-3 rounded-2xl border border-white/20 hover:border-brand-400">Soy distribuidor</a>
+        </div>
+      </div>
+      <div>
+        <div class="aspect-[4/5] rounded-3xl bg-white/5 border border-white/10 shadow-soft p-4 grid place-items-center">
+          <!-- Sustituye por foto de producto hero -->
+          <img src="assets/hero-dc2.jpg" alt="Producto DC2" class="h-full w-full object-cover rounded-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="bg-white text-ink">
+    <div class="container container-slim mx-auto px-4 py-16 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Productos DC2</h2>
+      <p class="mt-3 text-ink/70">Sustituye las imágenes en <code>/assets</code> por tus envases finales. Cada tarjeta enlaza al detalle más abajo.</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <!-- CARD: Serum Activador Celular -->
+        <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-soft">
+          <a href="#p-serum-activador" class="block group">
+            <div class="aspect-[1/1] rounded-2xl bg-ink/5 grid place-items-center overflow-hidden">
+              <img src="assets/serum-activador.jpg" alt="Sérum Activador Celular" class="h-full w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Sérum Activador Celular</h3>
+            <p class="mt-2 text-ink/70">20% Ácido Hialurónico + complejo de aminoácidos y oligopéptidos. Efecto flash luminosidad.</p>
+          </a>
+        </article>
+        <!-- CARD: Serum DMAE -->
+        <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-soft">
+          <a href="#p-serum-dmae" class="block group">
+            <div class="aspect-[1/1] rounded-2xl bg-ink/5 overflow-hidden grid place-items-center">
+              <img src="assets/serum-dmae.jpg" alt="Sérum DMAE 15%" class="h-full w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Sérum DMAE 15%</h3>
+            <p class="mt-2 text-ink/70">Tono y firmeza visibles. Efecto lifting inicial en ~30 min; mejora continua a 3–4 meses.</p>
+          </a>
+        </article>
+        <!-- CARD: Crema Revitalizante -->
+        <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-soft">
+          <a href="#p-crema-lifting" class="block group">
+            <div class="aspect-[1/1] rounded-2xl bg-ink/5 overflow-hidden grid place-items-center">
+              <img src="assets/crema-lifting.jpg" alt="Crema Revitalizante Efecto Lifting" class="h-full w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Crema Revitalizante Efecto Lifting</h3>
+            <p class="mt-2 text-ink/70">Noche nutritiva con aceites (almendra, aguacate, trigo), retinol, vitamina E y aminoácidos.</p>
+          </a>
+        </article>
+        <!-- CARD: Loción Láctica Frutal -->
+        <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-soft">
+          <a href="#p-locion-lactica" class="block group">
+            <div class="aspect-[1/1] rounded-2xl bg-ink/5 overflow-hidden grid place-items-center">
+              <img src="assets/locion-lactica.jpg" alt="Loción Láctica Frutal" class="h-full w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Loción Láctica Frutal</h3>
+            <p class="mt-2 text-ink/70">Exfoliación suave con ácido láctico + extractos de granada, frutos silvestres y limón.</p>
+          </a>
+        </article>
+        <!-- CARD: Quintaesencia -->
+        <article class="rounded-3xl border border-ink/10 bg-white p-6 shadow-soft">
+          <a href="#p-quintaesencia" class="block group">
+            <div class="aspect-[1/1] rounded-2xl bg-ink/5 overflow-hidden grid place-items-center">
+              <img src="assets/quintaesencia.jpg" alt="Quintaesencia" class="h-full w-full object-cover group-hover:scale-[1.02] transition" />
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Quintaesencia</h3>
+            <p class="mt-2 text-ink/70">Hidratación profunda + unificación del tono. Textura ligera con absorción inmediata.</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLES DE PRODUCTO (anclajes simples) -->
+  <section class="container container-slim mx-auto px-4 py-16 md:py-20 space-y-10">
+    <!-- Serum Activador Celular -->
+    <article id="p-serum-activador" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-2xl font-extrabold">Sérum Activador Celular</h3>
+      <p class="mt-2 text-white/80">Ácido Hialurónico 20% + complejo de aminoácidos y oligopéptidos (efecto tipo FCE), elastina marina y extracto de soja. Efecto flash de luminosidad y nutrición profunda.</p>
+      <ul class="mt-3 text-white/70 list-disc pl-5 space-y-1">
+        <li>Tensión ligera y mejora de tonicidad.</li>
+        <li>Aplicación: mañana y noche sobre piel limpia.</li>
+        <li>Tip: unas gotas sobre maquillaje potencian la luz.</li>
+      </ul>
+    </article>
+    <!-- Serum DMAE -->
+    <article id="p-serum-dmae" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-2xl font-extrabold">Sérum DMAE 15%</h3>
+      <p class="mt-2 text-white/80">DMAE para aumentar el tono muscular y firmeza. Humectación con butilenglicol y alto poder antioxidante del granado.</p>
+      <ul class="mt-3 text-white/70 list-disc pl-5 space-y-1">
+        <li>Efecto lifting apreciable ~30 min tras la aplicación.</li>
+        <li>Resultados en elasticidad/arrugas: 3–4 meses.</li>
+        <li>Aplicación: pequeña cantidad, 2 veces al día.</li>
+      </ul>
+    </article>
+    <!-- Crema Lifting -->
+    <article id="p-crema-lifting" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-2xl font-extrabold">Crema Revitalizante Efecto Lifting</h3>
+      <p class="mt-2 text-white/80">Nutrición nocturna intensiva con aceites de almendras, aguacate y trigo, extractos frutales, retinol, vitamina E y complejo de aminoácidos.</p>
+      <ul class="mt-3 text-white/70 list-disc pl-5 space-y-1">
+        <li>Especial pieles secas o desvitalizadas.</li>
+        <li>Estimula la renovación celular durante la noche.</li>
+        <li>Aplicación: noche; por la mañana, usar DC2 Quintaesencia.</li>
+      </ul>
+    </article>
+    <!-- Loción Láctica Frutal -->
+    <article id="p-locion-lactica" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-2xl font-extrabold">Loción Láctica Frutal</h3>
+      <p class="mt-2 text-white/80">Exfoliante/despigmentante suave por su contenido en ácido láctico. Con granada (antioxidante), frutos silvestres (hidratantes) y limón (blanqueante/astringente).</p>
+      <ul class="mt-3 text-white/70 list-disc pl-5 space-y-1">
+        <li>Desde el primer día aporta brillo y tersura.</li>
+        <li>Aplicación: por la noche con algodón sobre piel limpia.</li>
+      </ul>
+    </article>
+    <!-- Quintaesencia -->
+    <article id="p-quintaesencia" class="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <h3 class="text-2xl font-extrabold">Quintaesencia</h3>
+      <p class="mt-2 text-white/80">Crema de día que combina activos antimanchas con hidratación profunda y mejora de textura. Absorción inmediata y luminosidad visible.</p>
+      <ul class="mt-3 text-white/70 list-disc pl-5 space-y-1">
+        <li>Aplicación: de día tras el Sérum Activador Celular.</li>
+        <li>Con aceites de sésamo, jojoba, almendras y germen de trigo.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="container container-slim mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold">Por qué elegir DC2</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6"><h3 class="font-bold text-xl">Activos eficaces</h3><p class="mt-2 text-white/70">Concentraciones reales y combinaciones inteligentes para resultados medibles.</p></div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6"><h3 class="font-bold text-xl">Texturas sensoriales</h3><p class="mt-2 text-white/70">Absorción rápida, acabado ligero y aromas frescos.</p></div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6"><h3 class="font-bold text-xl">Soporte a distribuidores</h3><p class="mt-2 text-white/70">Materiales de marketing y disponibilidad para campañas estacionales.</p></div>
+    </div>
+  </section>
+
+  <!-- SOSTENIBILIDAD (placeholder breve) -->
+  <section id="sostenibilidad" class="bg-white text-ink">
+    <div class="container container-slim mx-auto px-4 py-16 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Sostenibilidad</h2>
+      <p class="mt-3 text-ink/70 max-w-3xl">Priorizamos proveedores cercanos, lotes de producción responsables y envases optimizados. Esta sección puede ampliarse con certificaciones y fichas de seguridad.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container container-slim mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold">Preguntas frecuentes</h2>
+    <div class="mt-8 space-y-4">
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">¿Cómo usar la rutina DC2?</summary>
+        <p class="mt-2 text-white/70">Mañana: Sérum Activador Celular → Quintaesencia. Noche: Loción Láctica (2–3 veces/sem según tolerancia) → Crema Revitalizante. DMAE puede usarse mañana y noche.</p>
+      </details>
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">¿Aptos para piel sensible?</summary>
+        <p class="mt-2 text-white/70">Testeados dermatológicamente. Introducir activos progresivamente y realizar prueba de tolerancia.</p>
+      </details>
+      <details class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <summary class="cursor-pointer font-semibold">¿Dónde comprar?</summary>
+        <p class="mt-2 text-white/70">Muy pronto en nuestra tienda online y distribuidores autorizados. Escríbenos para B2B.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-white text-ink">
+    <div class="container container-slim mx-auto px-4 py-16 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Contacto</h2>
+      <p class="mt-3 text-ink/70">Distribución, prensa o compras. Te respondemos en 24–48h.</p>
+      <form class="mt-8 grid md:grid-cols-2 gap-4 max-w-3xl" action="https://formspree.io/f/your-id" method="POST">
+        <input class="px-4 py-3 rounded-xl border border-ink/10" name="nombre" placeholder="Nombre" required>
+        <input class="px-4 py-3 rounded-xl border border-ink/10" type="email" name="email" placeholder="Email" required>
+        <input class="px-4 py-3 rounded-xl border border-ink/10 md:col-span-2" name="asunto" placeholder="Asunto" required>
+        <textarea class="px-4 py-3 rounded-xl border border-ink/10 md:col-span-2" name="mensaje" rows="5" placeholder="Cuéntanos brevemente"></textarea>
+        <button class="mt-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-ink text-white font-semibold hover:opacity-90">Enviar</button>
+      </form>
+      <p class="mt-4 text-sm text-ink/60">O escríbenos: <a class="underline" href="mailto:info@dc2.es">info@dc2.es</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10">
+    <div class="container container-slim mx-auto px-4 py-10 text-sm text-white/60">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <p>© <span id="year"></span> DC2 Natural Cosmeceuticals</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-brand-400" href="#">Aviso legal</a>
+          <a class="hover:text-brand-400" href="#">Privacidad</a>
+          <a class="hover:text-brand-400" href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn=document.getElementById('menuBtn');const menu=document.getElementById('menu');
+    if(btn) btn.addEventListener('click',()=>menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
