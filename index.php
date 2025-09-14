@@ -203,39 +203,22 @@ require 'htmlCode.php';
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="bg-white text-ink">
-    <div class="container container-slim mx-auto px-4 py-16 md:py-20">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Contacto</h2>
-      <p class="mt-3 text-ink/70">Distribución, prensa o compras. Te respondemos en 24–48h.</p>
-      <form class="mt-8 grid md:grid-cols-2 gap-4 max-w-3xl" action="https://formspree.io/f/your-id" method="POST">
-        <input class="px-4 py-3 rounded-xl border border-ink/10" name="nombre" placeholder="Nombre" required>
-        <input class="px-4 py-3 rounded-xl border border-ink/10" type="email" name="email" placeholder="Email" required>
-        <input class="px-4 py-3 rounded-xl border border-ink/10 md:col-span-2" name="asunto" placeholder="Asunto" required>
-        <textarea class="px-4 py-3 rounded-xl border border-ink/10 md:col-span-2" name="mensaje" rows="5" placeholder="Cuéntanos brevemente"></textarea>
-        <button class="mt-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-ink text-white font-semibold hover:opacity-90">Enviar</button>
-      </form>
-      <p class="mt-4 text-sm text-ink/60">O escríbenos: <a class="underline" href="mailto:info@dc2.es">info@dc2.es</a></p>
-    </div>
-  </section>
+  <?php
+  contact();
+  ?>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/10">
-    <div class="container container-slim mx-auto px-4 py-10 text-sm text-white/60">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <p>© <span id="year"></span> DC2 Natural Cosmeceuticals</p>
-        <div class="flex items-center gap-4">
-          <a class="hover:text-brand-400" href="#">Aviso legal</a>
-          <a class="hover:text-brand-400" href="#">Privacidad</a>
-          <a class="hover:text-brand-400" href="#">Cookies</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php
+  drawFooter();
+  ?>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const btn=document.getElementById('menuBtn');const menu=document.getElementById('menu');
     if(btn) btn.addEventListener('click',()=>menu.classList.toggle('hidden'));
   </script>
+  <!-- Script para reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=TU_SITE_KEY"></script>
+  <script src="js/recaptcha.js"></script>
 </body>
 </html>
