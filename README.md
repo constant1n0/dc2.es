@@ -9,4 +9,4 @@ Construida con HTML + Tailwind (CDN).
 
 ## Deployment
 Se publica en GitHub Pages:
-https://constant1n0.github.io/dc2-website/
+https://constant1n0.github.io/dc2.es/
